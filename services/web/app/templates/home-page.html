@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <script src="{{ url_for('static', filename='js/home-page.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/show-table.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="content-body">
+        Сколько строк таблицы необходимо отобразить?
+        <input type="number" id="count-rows"> <button onclick="showTable()">Показать</button>
+    </div>
+    <div class="result" id="result-response"></div>
+{% endblock %}

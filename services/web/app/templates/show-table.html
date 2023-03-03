@@ -1,0 +1,13 @@
+<div class="members-table">
+    {% for member in members %}
+    <div class="row">
+        <div class="cel">{{ member.id }}</div>
+        <div class="cel">{{ member.created.strftime('%d.%m.%Y %H:%M') }}</div>
+        <div class="cel">{{ member.description }}</div>
+    </div>
+    {% else %}
+        <p class="empty-data">
+            Нет данных для отображения
+        </p>
+    {% endfor %}
+</div>

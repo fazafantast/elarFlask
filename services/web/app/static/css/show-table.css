@@ -1,0 +1,24 @@
+div.members-table {
+    display: block;
+}
+div.row {
+    display: flex;
+    flex-direction: row;
+    padding: 10pt 0;
+}
+div.row:not(:first-child) {
+    border-top: lightgray solid 2px;
+}
+div.cel {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+div.cel:first-child {
+    color:green;
+    font-weight: bold;
+    width: 50px;
+}
+p.empty-data {
+    color: red;
+}

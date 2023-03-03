@@ -3,6 +3,7 @@ from flask import Flask, render_template
 from flask_migrate import Migrate
 
 from models import db
+from views import home_page_view, show_table_view
 
 app = Flask(__name__, template_folder='templates')
 
@@ -18,6 +19,10 @@ migrate.init_app(app, db)
 @app.errorhandler(404)
 def not_found(error):
     return render_template('page-not-found.html'), 404
+
+
+app.route('/', methods=['GET'])(home_page_view)
+app.route('/show-table/<int:row_count>/', methods=['GET'])(show_table_view)
 
 
 if __name__ == '__main__':

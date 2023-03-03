@@ -1,0 +1,16 @@
+input {
+    margin: 0 10px;
+    width: 50px;
+}
+div.content-body {
+    padding: 50px 0 25px 0;
+}
+div.result, div.content-body {
+    display: flex;
+    justify-content: center;
+}
+.error {
+    font-weight: bold;
+    font-size: 25pt;
+    color: blue;
+}
